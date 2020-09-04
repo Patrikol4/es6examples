@@ -1,16 +1,32 @@
-class TodoList {
+class List{
 	constructor(){
-		this.todos = [];
+		this.data = [];
 	}
 
-	addTodo(){
-		this.todos.push('Novo Todo');
-		console.log(this.todos);
+	add(data){
+		this.data.push(data);
+		console.log(data);
+	}
+}
+
+class TodoList extends List{
+	constructor(){
+		// Chamando o constructor da classe pai
+		super();
+
+		this.usuario = 'Patrick';
+
+	}
+
+	mostraUsuario(){
+		console.log(this.usuario);
 	}
 }
 
 const MinhaLista = new TodoList();
 
 document.getElementById('novotodo').onclick = function(){
-	MinhaLista.addTodo();
+	MinhaLista.add('Novo Todo');
 }
+
+MinhaLista.mostraUsuario();
