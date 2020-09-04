@@ -1,16 +1,21 @@
-class TodoList {
-	constructor(){
-		this.todos = [];
-	}
+// Arrays
 
-	addTodo(){
-		this.todos.push('Novo Todo');
-		console.log(this.todos);
-	}
-}
+const array = [1, 3, 5, 9, 12 ];
 
-const MinhaLista = new TodoList();
+const newArray = array.map(function (item){
+	return item * 2;
+});
 
-document.getElementById('novotodo').onclick = function(){
-	MinhaLista.addTodo();
-}
+console.log(newArray);
+
+// Outra forma de declaração
+// Desta vez, utilizando o valor da index para ser multiplicado com o valor do item
+
+const newArray = [1, 3, 5, 9, 12];
+
+const anotherArray = array.map(function (item, index){
+	return item + index;
+});
+
+console.log(anotherArray);
+
