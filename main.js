@@ -19,3 +19,11 @@ const anotherArray = array.map(function (item, index){
 
 console.log(anotherArray);
 
+// Reduce = Conta todos os arrays e os soma de forma completa
+
+const soma = array.reduce(function (total, next){
+	return total + next;
+});
+
+console.log(soma);
+
